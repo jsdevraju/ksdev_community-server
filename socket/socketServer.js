@@ -16,6 +16,8 @@ export const socketServer = (server) => {
   const io = new Server(server, {
     cors: {
       origin: [`${process.env.CLIENT}`, `${process.env.HOST_CLIENT}`],
+      methods: ["GET", "POST"],
+      credentials: true
     },
   });
 

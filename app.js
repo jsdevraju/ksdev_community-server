@@ -11,9 +11,7 @@ config();
 const app =  express();
 
 // App Middleware
-app.use(cors({
-    origin:[`${process.env.CLIENT}`, `${process.env.HOST_CLIENT}`]
-}));
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan("dev"))
