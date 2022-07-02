@@ -15,7 +15,7 @@ import { roomSignalingHandler } from "./roomSignalingHandler.js";
 export const socketServer = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: "*",
+      origin: [`${process.env.CLIENT}`, `${process.env.HOST_CLIENT}`],
     },
   });
 
