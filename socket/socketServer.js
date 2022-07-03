@@ -12,10 +12,11 @@ import { roomLeaveHandler } from "./roomLeaveHandler.js";
 import { roomInitializeConnectionHandler } from "./roomInitializeConnectionHandler/roomInitializeConnectionHandler.js";
 import { roomSignalingHandler } from "./roomSignalingHandler.js";
 
+
 export const socketServer = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: [`${process.env.CLIENT}`, `${process.env.HOST_CLIENT}`],
+      origin: "http://localhost:3000",
       methods: ["GET", "POST"],
       credentials: true
     },
